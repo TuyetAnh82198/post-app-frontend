@@ -8,18 +8,16 @@ const Login = () => {
 
   //hàm kiểm tra người dùng đã đăng nhập chưa
   const checkLogin = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/check-login`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/check-login", {
       method: "GET",
       credentials: "include",
     })
       .then((response) => response.json())
       .then((data) => {
         if (data.message === "You are logged in") {
-          console.log(data);
           setIsLoggedIn(true);
         } else if (data.message === "have not been logged in yet") {
           setIsLoggedIn(false);
-          console.log(data);
         }
       })
       .catch((err) => console.log(err));
@@ -35,7 +33,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const formSubmit = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/login`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

@@ -24,7 +24,7 @@ const View = () => {
         <Card.Body style={{ textAlign: "center" }}>
           <Card.Img
             className="rounded-0 w-50 my-5"
-            src={`${process.env.REACT_APP_SERVER}/${post.image}`}
+            src={`https://post-app-backend-dr19.onrender.com/${post.image}`}
             alt="image"
           />
           <Card.Text style={{ color: "#3b0062" }}>{post.content}</Card.Text>

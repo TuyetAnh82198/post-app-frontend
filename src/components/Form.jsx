@@ -46,7 +46,7 @@ const FormComponent = (props) => {
       formData.append("title", title);
       formData.append("content", content);
       formData.append("image", imageInput.current.files[0]);
-      fetch(`${process.env.REACT_APP_SERVER}/posts/post`, {
+      fetch("https://post-app-backend-dr19.onrender.com/posts/post", {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -69,7 +69,7 @@ const FormComponent = (props) => {
       formData.append("title", title);
       formData.append("content", content);
       formData.append("image", imageInput.current.files[0]);
-      fetch(`${process.env.REACT_APP_SERVER}/posts/update`, {
+      fetch("https://post-app-backend-dr19.onrender.com/posts/update", {
         method: "POST",
         credentials: "include",
         body: formData,

@@ -24,7 +24,7 @@ const Post = () => {
   const navigate = useNavigate();
   //hàm kiểm tra người dùng đã đăng nhập chưa
   const checkLogin = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/check-login`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/check-login", {
       method: "GET",
       credentials: "include",
     })
@@ -40,11 +40,8 @@ const Post = () => {
 
   //hàm lấy danh sách bài viết để hiển thị
   const fetchPosts = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/posts/get`, {
+    fetch("https://post-app-backend-dr19.onrender.com/posts/get", {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
       credentials: "include",
     })
       .then((response) => response.json())
@@ -93,7 +90,7 @@ const Post = () => {
 
   //hàm xóa bài viết
   const deletePost = (id) => {
-    fetch(`${process.env.REACT_APP_SERVER}/posts/delete/${id}`, {
+    fetch(`https://post-app-backend-dr19.onrender.com/posts/delete/${id}`, {
       method: "GET",
       credentials: "include",
     })

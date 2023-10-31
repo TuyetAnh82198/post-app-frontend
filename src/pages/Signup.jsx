@@ -8,7 +8,7 @@ const Signup = () => {
 
   //hàm kiểm tra người dùng đã đăng nhập chưa
   const checkLogin = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/check-login`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/check-login", {
       method: "GET",
       credentials: "include",
     })
@@ -35,7 +35,7 @@ const Signup = () => {
 
   const navigate = useNavigate();
   const formSubmit = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/signup`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

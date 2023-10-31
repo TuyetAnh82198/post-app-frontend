@@ -7,7 +7,7 @@ const RootLayout = () => {
 
   //hàm kiểm tra người dùng đã đăng nhập chưa
   const checkLogin = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/check-login`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/check-login", {
       method: "GET",
       credentials: "include",
     })
@@ -25,7 +25,7 @@ const RootLayout = () => {
 
   //hàm đăng xuất
   const logOut = () => {
-    fetch(`${process.env.REACT_APP_SERVER}/users/logout`, {
+    fetch("https://post-app-backend-dr19.onrender.com/users/logout", {
       method: "GET",
       credentials: "include",
     })
